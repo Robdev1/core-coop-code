@@ -91,7 +91,7 @@ $returnmembershare = $return * $membersfraction;
 Share of Return per Member: $<?php echo $returnmembershare ?><p>
 <!-- <TEXTAREA NAME="returnmembershare" ROWS=1 COLS=15
 WRAP=soft><?php echo $returnmembershare ?></textarea>
-<br> --><hr><!-- The following section gives an alternative percentage of ownership -->If one member holds 51% and the remaining shares are divided equally among the others the breakdown is:<br><?php$amtfor51pcter = $capital1 * .51;$numremainmembers = $membersnum - 1;$pctremainmembers = .49/$numremainmembers;$amtremainmemberstotal = $capital1 * .49;$amtperremainmembers = $amtremainmemberstotal / $numremainmembers;echo ("Member with 51% contributes  $amtfor51pcter <br>");echo ("The other  $numremainmembers  contribute  $amtperremainmembers  each for  $pctremainmembers portion each.<br>");?>
+<br> --><hr><!-- The following section gives an alternative percentage of ownership -->If one member holds 51% and the remaining shares are divided equally among the others the breakdown is:<p><?php$amtfor51pcter = $capital1 * .51;$amtfor51pcter = number_format($amtfor51pcter, 2);$numremainmembers = $membersnum - 1;$pctremainmembers = .49/$numremainmembers;$pctremainmembers = number_format(($pctremainmembers * 100), 2);$amtremainmemberstotal = $capital1 * .49;$amtperremainmembers = $amtremainmemberstotal / $numremainmembers;$amtperremainmembers = number_format($amtperremainmembers, 2);echo (" * Member with 51% contributes  $$amtfor51pcter <br>");echo (" * The other  $numremainmembers  contribute  $$amtperremainmembers each for $pctremainmembers%  portion each.<p>");?>
 <input type=submit value=‘submit’>
 <input type=reset  value=‘reset’>
 <BR>
